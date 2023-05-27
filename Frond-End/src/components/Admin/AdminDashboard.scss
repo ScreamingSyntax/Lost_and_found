@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.admin-search{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        .entries{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            input{
+                background: #E0E0E0;
+                border: none;
+                outline: none;
+                padding: 10px;
+                border-radius: 8px;
+                font-weight: 900;
+                width: 50px;
+            }
+        }
+        .search-bar{
+            border: 1px solid #9E9E9E;
+            // e0e0e0e
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border-radius: 5px;
+            width: 250px;
+            svg{
+                margin-bottom: 1px;
+                font-size: 18px;
+                color: #818181;
+            }
+            input{
+                border: none;
+                outline: none;
+                width: 100%;
+            }
+        }
+    }
+    .right{
+        cursor: pointer;
+        p{
+            background: #624DE3;
+            padding: 7px 10px;
+            color: white;
+            border-radius: 8px;
+        }
+        &:hover{
+            transform: scale(0.9);
+        }
+    }
+}
+
+.item-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    table{
+        // border: 1px solid black;
+        border: none;
+        width: 100%;
+        padding: 0 10%;
+        border-collapse: collapse;
+        th{
+            text-align: start;
+            padding-bottom: 20px;
+        }
+        tr:nth-child(even){
+            background: #E0E0E0;
+        }
+        td{
+            height: 60px;
+            border: none;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+            }
+            .buttons{
+                display: flex;
+                gap: 10px;
+                font-size: 20px;
+                .edit-btn{
+                    color:#624DE3;
+                    cursor: pointer;
+                }
+                .delete-btn{
+                    color: #A30D11;
+                    cursor: pointer;
+                }
+            }
+            .claim-status{
+                background-color: #d6a34340;
+                padding: 10px 20px;
+                border-radius: 100px;
+                color: #D6A243;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 170px;
+            }
+        }
+    }
+}

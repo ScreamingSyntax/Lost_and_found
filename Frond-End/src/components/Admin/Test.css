@@ -1,0 +1,14 @@
+.admin-search{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right{
+    background: #624DE3;
+    /* // backgrousnd-color: #A30D11; */
+}
