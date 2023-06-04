@@ -23,17 +23,17 @@ const AddItems = () => {
         setPath(e.target.files[0])
         document.querySelector(".text").style.display = "none";
     }
-
+    // ``
     const handleSubmit = async (event) => {
       event.preventDefault();
 
       try {
         const formData = new FormData();
         formData.append('item_name', itemName);
-        formData.append('addition_date', additionDate);
+        formData.append('found_date', additionDate);
         formData.append('found_location', foundLocation);
         formData.append('found_by', foundBy);
-        formData.append('register',  path);
+        formData.append('item_image',  path);
         console.log(itemName)
         const response = await Axios.post('http://localhost:8000/api/admin/', formData, {
           headers: {

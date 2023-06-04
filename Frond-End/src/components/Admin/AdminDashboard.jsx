@@ -23,7 +23,10 @@ const AdminDashboard = () => {
     
     const removeItem = (id)=>{
         console.log(id)
-        Axios.delete("http://192.168.212.193:8000/api/admin",{
+        Axios.delete("http://localhost:8000/api/admin",{
+            headers:{
+                'Content-Type':'application/json'
+            },
             data:{
                 item_image: id
             }
@@ -67,14 +70,14 @@ const AdminDashboard = () => {
                     
                     {items
                         ?   items.map((item)=>{
-                                const imgPath = `http://localhost:8000/register/${item.item_image}`
+                                const imgPath = `http://localhost:8000/item_image/${item.item_image}`
                                 return (
                                     <tr>
                                         <td>{item.item_name}</td>
                                         <td><div className="image"><img src={imgPath} alt="" /></div></td>
                                         <td>{item.found_location}</td>
                                         <td>{item.found_by}</td>
-                                        <td>{item.addition_date}</td>
+                                        <td>{item.found_date}</td>
                                         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
                                         <td><span className="claim-status"><box-icon name='loader'></box-icon> Un-Claimed</span></td>
                                         <td><span className="buttons"><FiEdit className="edit-btn"/><RiDeleteBinLine className="delete-btn" onClick={()=>removeItem(item.item_image)}/></span></td>
